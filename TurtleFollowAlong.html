@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python Turtle Follow-Along · GitBook</title>
+        <title>Turtle Follow-Along · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="TurtleChallenges.html" />
+    
     
     <link rel="prev" href="./" />
     
@@ -100,12 +102,38 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="TurtleIntro.html">
+        <li class="chapter active" data-level="1.2" data-path="TurtleFollowAlong.html">
             
-                <a href="TurtleIntro.html">
+                <a href="TurtleFollowAlong.html">
             
                     
-                    Python Turtle Follow-Along
+                    Turtle Follow-Along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="TurtleChallenges.html">
+            
+                <a href="TurtleChallenges.html">
+            
+                    
+                    Turtle Challenges
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="TurtleExamples.html">
+            
+                <a href="TurtleExamples.html">
+            
+                    
+                    Turtle Examples
             
                 </a>
             
@@ -143,7 +171,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Python Turtle Follow-Along</a>
+        <a href="." >Turtle Follow-Along</a>
     </h1>
 </div>
 
@@ -158,7 +186,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="python-coding-activity---turtle-graphics">Python Coding Activity - Turtle Graphics</h1>
+                                <h1 id="follow-along-activity---turtle-graphics">Follow-Along Activity - Turtle Graphics</h1>
 <p><img src="https://i.imgur.com/zVWdA5m.png" alt=""> &lt;- (not this kind of turtle)</p>
 <p>In this activity, write a <strong>Python</strong> application and play around with some two-dimensional graphics. It will provide a glimpse into the power of programming and show how fun it can be to write code!</p>
 <h2 id="python">Python</h2>
@@ -303,6 +331,34 @@ koopa.right(<span class="hljs-number">90</span>)
     shelly.right(<span class="hljs-number">120</span>)
 </code></pre>
 <p>With the use of loops, the file is much shorter, and easier to maintain. Loops are one of the most important parts of programming!</p>
+<h2 id="final-code">Final Code</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+
+koopa = Turtle()
+koopa.shape(<span class="hljs-string">&quot;arrow&quot;</span>)
+koopa.color(<span class="hljs-string">&quot;green&quot;</span>)
+
+paper = koopa.getscreen()
+paper.bgcolor(<span class="hljs-string">&quot;black&quot;</span>)
+
+<span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
+    koopa.forward(<span class="hljs-number">50</span>)
+    koopa.right(<span class="hljs-number">90</span>)
+
+shelly = Turtle()
+shelly.shape(<span class="hljs-string">&quot;turtle&quot;</span>)
+shelly.color(<span class="hljs-string">&quot;white&quot;</span>)
+
+shelly.penup()
+shelly.setpos(<span class="hljs-number">-100</span>, <span class="hljs-number">100</span>)
+shelly.pendown()
+
+<span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+    shelly.forward(<span class="hljs-number">100</span>)
+    shelly.right(<span class="hljs-number">120</span>)
+</code></pre>
+<h2 id="turtle-challenges">Turtle Challenges</h2>
+<p>After completing the follow-along activity, try some of the <a href="TurtleChallenges.html">challenges</a>!</p>
 
                                 
                                 </section>
@@ -330,10 +386,14 @@ koopa.right(<span class="hljs-number">90</span>)
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Home">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Home">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="TurtleChallenges.html" class="navigation navigation-next " aria-label="Next page: Turtle Challenges">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -342,7 +402,7 @@ koopa.right(<span class="hljs-number">90</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python Turtle Follow-Along","level":"1.2","depth":1,"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"TurtleIntro.md","mtime":"2019-08-22T13:46:35.058Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-22T14:14:55.114Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Turtle Follow-Along","level":"1.2","depth":1,"next":{"title":"Turtle Challenges","level":"1.3","depth":1,"path":"TurtleChallenges.md","ref":"TurtleChallenges.md","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"TurtleFollowAlong.md","mtime":"2019-08-22T19:42:35.007Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-22T19:42:45.005Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
