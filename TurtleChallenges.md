@@ -4,14 +4,21 @@ Play around with the turtles to create something cool! Feel free to start from t
 ## Pentagon
 Update the code so that the turtle draws a pentagon instead of a triangle.
 
-_HINT: Update the numbers from the triangle loop so that the turtle draws the correct number of sides, and turns the correct angle each time_
+### Code to update
+```python
+for x in range(3):
+    shelly.forward(100)
+    shelly.right(120)
+```
+
+_HINT: Update the numbers from the triangle loop (the `3` and the `120`) so that the turtle draws the correct number of sides, and turns the correct angle each time_
 
 ## Many-pointed star
 Update the code so that the turtle draws a many-pointed star instead of a square! It could look something like this:
 
 ![many-pointed star](https://i.imgur.com/uJR2FZO.png)
 
-_HINT: Update the numbers from the square loop until the shape looks good_
+_HINT: Try out different numbers in the square loop until the shape looks good_
 
 ## Turtle examples
 Check out the [Turtle Examples](TurtleExamples.md) to see some cool turtle features. Try copying and pasting some of the code, and updating it to create something unique. Change any of the numbers or colors to see how it affects the drawing!
