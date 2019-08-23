@@ -18,26 +18,15 @@ Turtles can change their speed. Run the program to see the speed change! Try out
 <iframe src="https://trinket.io/embed/python/19c5bb2b32" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 
-### Hiding the turtle
-There is a command that will make the turtle invisible. This can be very useful when drawing. In the `main.py` file, add the following command:
-```python
-koopa.hideturtle()
-```
+### Hiding and showing the turtle
+There is a command that will make the turtle invisible. This can be very useful when drawing. It is also possible to **show** the turtle after it has hidden. Run the program to see the turtle disappear and then reappear! Try to use this code to improve your existing project.
 
-Run the program to see the turtle disappear!
-
-It is also possible to **show** the turtle after it has hidden, using the following command:
-```python
-koopa.showturtle()
-```
+<iframe src="https://trinket.io/embed/python/539050ab86" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 ### Turtle circles
-There is a command that will make the turtle draw a circle. In the `main.py` file, add the following command:
-```python
-koopa.circle(50)
-```
+There is a command that will make the turtle draw a circle. Run the program to see the circle! Change the size of the circle by using numbers other than `50`. Try to add some circles to your existing project.
 
-Run the program to see the circle! It is also possible to change the size of the circle by using numbers other than `50`.
+<iframe src="https://trinket.io/embed/python/5be107ff88" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 ## Examples
 ### Circles
