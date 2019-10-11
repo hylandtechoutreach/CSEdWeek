@@ -42,10 +42,10 @@ koopa.shape("arrow")
 
 These lines create a turtle and set its shape. In this case, the turtle is `koopa`, but the turtle could have any name. Click the "Run" button to see the "turtle" appear on the page!
 
-#### Challenge: Change the shape to "turtle"
+#### Challenge: Change the Shape to "turtle"
 Update the code so that instead of setting the shape to `"arrow"`, it sets the shape to `"turtle"`. Run the program again to see the shape shift!
 
-### Adding color
+### Add Color
 Black and white is boring, so we can add some color to the program! On the next line of the `main.py` file, add the following command:  
 ```python
 koopa.color("green")
@@ -54,53 +54,132 @@ koopa.color("green")
 This command will turn the turtle green! Next, we can change the background color. Add a blank line, and then add the following commands:
 ```python
 paper = koopa.getscreen()
-paper.bgcolor("black")
+paper.bgcolor("azure")
 ```
 
-These commands get the screen and set its background color to black. Run the program again to see the new colors on the page!
+These commands get the screen and set its background color to azure. Run the program again to see the new colors on the page!
 
-#### Challenge: Change the colors
-Update the code so that instead of green and black, the turtle and the background have different colors. For example, the turtle could be blue, and the background could be pink!
+#### Challenge: Change the Colors
+Update the code so that instead of green and azure, the turtle and the background have different colors. For example, the turtle could be blue, and the background could be pink!
 
-## Turtle Graphics - Moving the Turtle
-One of the most useful turtle abilities is the ability to move across the screen and draw like a pen! Create a blank line in the `main.py` file, and then add the following command on the next line:
+## Turtle Graphics - Basic Abilities
+Turtles can do a lot! Developers use the turtle abilities to create interesting designs and experiences.
+
+### Talking
+Turtles can talk by displaying messages on the screen. Make a new line, and add the following command:
+```python
+koopa.write("My name is Koopa")
+```
+
+Unfortunately, sometimes turtles cover their own messages! To move the message over, add some spaces at the beginning of the text.
+
+### Turning and Moving
+Turtles can change the direction they face by turning. They can turn either **left** or **right**. Use the following command on a new line to turn the turtle `90` degrees to the right so it faces down:
+```python
+koopa.right(90)
+```
+
+Turtles can also move across the canvas. If they move **forward**, they will travel in the direction they currently face. Use the following command on a new line to move the turtle down `75` pixels on the screen:
+```python
+koopa.forward(75)
+```
+
+## Turtle Graphics - Drawing and Storytelling
+Using these three simple abilities (_talking_, _turning_, and _moving_) it is possible to tell stories and create images that illustrate those stories. Use Koopa to draw a picture of a musical quarter note while describing the drawing!
+
+### Planning
+Before writing code, developers usually spend time planning what they want to do from a broad perspective. This technique helps avoid problems, and provides a vision of the bigger picture.
+
+Start by drawing a musical note on paper, or on a whiteboard. Koopa has already begun this drawing, so continue from there. A quarter note should look something like this:
+```
+         _
+        | |
+        | |
+        | |
+        | |
+ _______| |
+|         |
+|         |
+|_________|
+```
+
+Try to figure out which commands will be necessary to complete the drawing. While drawing on paper or on a whiteboard, notice the path of the writing utensil. Keep in mind how far the cursor travels across the Cartesian plane, the different positions, and the angles between each line. Each of these will relate to the code!
+
+### Drawing the Base
+First, have Koopa display a message and then continue down `75` for the base of the note:
+```python
+koopa.write(" I like to draw on my computer")
+koopa.forward(75)
+```
+
+This will complete the right side of the base. Next, draw the bottom line. This will require Koopa to turn to the **right**  `90` degrees and move forward:
+```python
+koopa.right(90)
+koopa.forward(100)
+```
+
+Next, start draw the left side of the base. The turtle should turn **right** `90` degrees to face upward, and then move forward `50` pixels.
+```python
+koopa.right(90)
+koopa.forward(50)
+```
+
+At this point, Koopa should display a message to the user to continue the story:
+```python
+koopa.write(" I can draw anything!")
+```
+
+Finally, to complete the base, Koopa should continue up the left side and then turn to draw the top:
 ```python
 koopa.forward(50)
+koopa.right(90)
+koopa.forward(85)
 ```
 
-When the program runs, the turtle moves across the screen! Specifically, it moves **forward** `50` pixels in the direction it is currently facing (90 degrees).
+### Drawing the Stem
+Complete the quarter note by drawing the stem. Koopa should turn **left** `90` degrees to face upward, then travel `150` pixels forward:
+```python
+koopa.left(90)
+koopa.forward(150)
+```
 
-It is also possible to turn the turtle. Add the following command on the next line:
+Next, to draw the top of the stem, Koopa should turn **right** `90` degrees and move `15` pixels to the right:
 ```python
 koopa.right(90)
+koopa.forward(15)
 ```
 
-This command turns the turtle `90` degrees to the **right**. Previously the direction of the turtle was 90 degrees (pointing to the right), so after turning 90 degrees to the right, the turtle should face down (180 degrees).
-
-Run the program to see the turtle move to the right, then turn to face down!
-
-### Drawing a square
-Add the following commands to the file, under the existing commands:
+Koopa still has a couple of things to say! Use the **write** command to display a message saying "I like music" next to the turtle: 
 ```python
-koopa.forward(50)
-koopa.right(90)
-koopa.forward(50)
-koopa.right(90)
-koopa.forward(50)
-koopa.right(90)
+koopa.write(" I like music")
 ```
 
-Run the program to see what this code does. It should draw a square! How does that work? On a piece of paper, or on a whiteboard, try to draw the same square as the turtle:
+Now, all that's left is the right side of the quarter note. Turn Koopa to face downward, and move part of the way down:
+```python
+koopa.right(90)
+koopa.forward(50)
+```
 
-1. Draw the top side from left to right
-1. Turn the writing utensil and draw the right side from top to bottom
-1. Turn the writing utensil and draw the bottom side from left to right
-1. Turn the writing utensil and draw the left side from bottom to top
+Finally, Koopa should display a message saying "I can draw a quarter note!" and complete the drawing!
+```python
+koopa.write(" I can draw a quarter note!")
+koopa.forward(90)
+```
 
-So, the turtle moves `50` pixels to the right, turns `90` degrees to face down, moves `50` pixels down, turns `90` degrees to face left, moves `50` pixels to the left, turns `90` degrees to face up, moves `50` pixels up, and finally, turns `90` pixels to face right once again!
+### Filling in the Drawing
+It is also possible to fill in drawings, sort of like using a paint bucket tool. To do this, make Koopa use the `begin_fill` command before drawing, and the `end_fill` command when the drawing is complete. Make sure to place these commands in the proper place!
 
-#### Challenge: Make the square bigger
-Currently, the square will be `50` pixels tall and `50` pixels wide. Try to change some of the numbers so that instead, the square is `100` pixels tall and `100` pixels wide!
+**Quarter Note Fill**
+```python
+koopa.begin_fill()
+
+koopa.write(" My name is Koopa")
+# ... code ...
+koopa.write(" I can draw a quarter note!")
+koopa.forward(90)
+
+koopa.end_fill()
+```
 
 ## Turtle Graphics - Multiple Turtles
 So far, the program has used one sole turtle to carry out all of the commands. However, it is also possible to create more than one turtle, and each turtle can do different things! We can create a new turtle, and have it draw a **triangle**!
@@ -110,10 +189,10 @@ Creating the _new_ turtle will be very similar to creating the original turtle. 
 ```python
 shelly = Turtle()
 shelly.shape("turtle")
-shelly.color("white")
+shelly.color("navy")
 ```
 
-Run the program to see the new white turtle appear at the end!
+Run the program to see the new navy turtle appear at the end!
 
 ### Drawing the triangle
 Shelly should draw three lines of equal length `100`, turning `120` degrees between each line. Add the following commands at the bottom of the `main.py` file:
@@ -128,109 +207,127 @@ shelly.right(120)
 
 Run the program to see Shelly draw the triangle!
 
-#### Challenge: Tilted triangle
-Currently, the triangle is tilted so that instead of being flat on the bottom, it is flat on the top. Add an additional command _before_ Shelly starts drawing so that the triangle is rotated and becomes flat on the bottom.
-
->HINT: Use `shelly.right` and an appropriate number for the angle!
-
 ### Changing the starting point
-In the current program, Shelly draws all over the existing shape. Instead, the program should move Shelly to another position _before_ drawing anything.
+When running the current program, Shelly draws all over Koopa's good work! Fix this by moving Shelly before the triangle drawing begins. Two commands make this possible: `penup` and `goto`.
 
-_Before_ the commands that make Shelly draw, add the following command:
-```python
-shelly.setpos(-100, 100)
-```
-
-Run the program to see what happens. Shelly moves, but there is another issue now!
-
-### Removing the extra pen marks
-When shelly moves to the starting point, the pen draws an extra line! Instead of doing this, the program should lift up the pen before this movement.
-
-When working with turtles, it is possible to control whether the pen is "up" or "down" (like real life drawing). _Before_ the `shelly.setpos` command, add the following command:
+First, lift Shelly's pen before changing the position. This command should happen right after Shelly is created, before the triangle is drawn. This will prevent errant pen marks from messing up the canvas:
 ```python
 shelly.penup()
 ```
 
-This will allow Shelly to move without drawing anything! Run the program to see what happens.
+Next, Shelly should move to a proper starting point on the screen. The top left corner will work well. Plotting this position on the Cartesian plane, the coordinates are `(-150, 150)`:
+```python
+shelly.goto(-150, 150)
+```
 
-### Putting the pen back down
-Oh no! After lifting up the pen, Shelly no longer draws the triangle! Fix this by adding the following command _after_ the `shelly.setpos` command:
+Now, Shelly moves in a triangle at the right place, but there is still more to do! After moving, Shelly wants to provide a little introduction. Write a message to the screen saying " My name is Shelly... I like triangles" next to Shelly:
+```python
+shelly.write(" My name is Shelly... I like triangles")
+```
+
+Now, Shelly has to move out of the way of the message on the screen. Use `goto` to move the turtle down `10` pixels:
+```python
+shelly.goto(-150, 140)
+```
+
+Finally, Shelly has to put the pen back down in order to draw! Use `pendown` to accomplish this:
 ```python
 shelly.pendown()
 ```
 
-This way, Shelly will pick up the pen when moving to the starting point, and then put it back down before moving in the triangular fashion. Run the program again to see it work properly!
-
-#### Challenge: New starting point
-Instead of starting Shelly at a position of `(-100, 100)`, move the starting point to be right above the square!
+Now Shelly can properly draw a triangle without interfering with any of Koopa's artwork! Next, see how Shelly can draw the triangle more efficiently using Loops.
 
 ## Loops
 Loops are a very powerful programming tool. They allow developers to repeat blocks of code automatically, without having to write the commands over and over again. One of the major benefits is that if the developer needs to change something, they only have to change it in one place!
 
-In the turtle code, there are a couple of blocks of code that could be improved with loops. Where do those repetitive commands occur?
+In the turtle code, there is a block of commands that could be improved with loops. Where do those repetitive commands occur?
 
-### Drawing the square
+### Drawing the triangle
 ```python
-koopa.forward(100)
-koopa.right(90)
-koopa.forward(100)
-koopa.right(90)
-koopa.forward(100)
-koopa.right(90)
-koopa.forward(100)
-koopa.right(90)
+shelly.forward(100)
+shelly.right(120)
+shelly.forward(100)
+shelly.right(120)
+shelly.forward(100)
+shelly.right(120)
 ```
 
-The two lines, `koopa.forward` and `koopa.right`, are repeated four times here. It takes up extra space in the file, and in order to update the program, each individual line would require update. For example, to make the square bigger, each `100` would have to change. Imagine if, instead of four times, the developer had to change four _hundred_ lines! Or, if the program needed to dynamically update the number of times to repeat the code, that would be impossible without loops.
-
-### Looping the square
-Use a `for` loop to automatically repeat the `forward` and `right` lines. Replace the square-drawing code with the following set of commands:
-```python
-for x in range(4):
-    koopa.forward(100)
-    koopa.right(90)
-```
-
-This will make the two lines repeat `4` times!
-
-Note that the two lines are _indented_; this is how the loop knows which commands should repeat. The `for x in range()` part is the same for any number of repetitions; the `4` specifies that the loop should repeat four times.
+The two lines, `shelly.forward` and `shelly.right`, are repeated three times here. It takes up extra space in the file, and in order to update the program, each individual line would require update. For example, to make the triangle bigger, each `100` would have to change. Imagine if, instead of three times, the developer had to change three _hundred_ lines! Or, if the program needed to dynamically update the number of times to repeat the code, that would be impossible without loops.
 
 ### Looping the triangle
-Apply the same looping technique for Shelly and the triangle. Replace the repeated lines of code with a new loop:
+Use a `for` loop to automatically repeat the `forward` and `right` lines. Replace the triangle-drawing code with the following set of commands:
 ```python
 for x in range(3):
     shelly.forward(100)
     shelly.right(120)
 ```
 
-With the use of loops, the file is much shorter, and easier to maintain. Loops are one of the most important parts of programming!
+This will make the two lines repeat `3` times!
+
+Note that the two lines are _indented_; this is how the loop knows which commands should repeat. The `for x in range()` part is the same for any number of repetitions; the `3` specifies that the loop should repeat four times.
+
+With the use of loops, the file is shorter, and easier to maintain. Loops are one of the most important parts of programming!
 
 ## Final Code
 ```python
 from turtle import *
 
 koopa = Turtle()
-koopa.shape("arrow")
+koopa.shape("turtle")
 koopa.color("green")
 
 paper = koopa.getscreen()
-paper.bgcolor("black")
+paper.bgcolor("azure")
 
-for x in range(4):
-    koopa.forward(50)
-    koopa.right(90)
+koopa.begin_fill()
+
+koopa.write(" My name is Koopa")
+koopa.right(90)
+koopa.forward(75)
+
+koopa.write(" I like to draw on my computer")
+koopa.forward(75)
+
+koopa.right(90)
+koopa.forward(100)
+
+koopa.right(90)
+koopa.forward(50)
+
+koopa.write(" I can draw anything!")
+koopa.forward(50)
+
+koopa.right(90)
+koopa.forward(85)
+
+koopa.left(90)
+koopa.forward(150)
+
+koopa.right(90)
+koopa.forward(15)
+
+koopa.write(" I like music")
+koopa.right(90)
+koopa.forward(50)
+
+koopa.write(" I can draw a quarter note!")
+koopa.forward(90)
+
+koopa.end_fill()
 
 shelly = Turtle()
 shelly.shape("turtle")
-shelly.color("white")
+shelly.color("navy")
 
 shelly.penup()
-shelly.setpos(-100, 100)
+shelly.goto(-150, 150)
+shelly.write(" My name is Shelly... I like triangles")
+shelly.goto(-150, 140)
 shelly.pendown()
 
 for x in range(3):
-    shelly.forward(100)
-    shelly.right(120)
+  shelly.forward(100)
+  shelly.right(120)
 ```
 
 ## Turtle Challenges

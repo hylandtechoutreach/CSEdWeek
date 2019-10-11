@@ -14,15 +14,15 @@ for x in range(3):
 _HINT: Update the numbers from the triangle loop (the `3` and the `120`) so that the turtle draws the correct number of sides, and turns the correct angle each time_
 
 ## Many-pointed star
-Update the code so that the turtle draws a many-pointed star instead of a square! It could look something like this:
+Update the code so that the turtle draws a many-pointed star! It could look something like this:
 
-![many-pointed star](https://i.imgur.com/uJR2FZO.png)
+![Many-pointed star](https://i.imgur.com/uJR2FZO.png)
 
-_HINT: Try out different numbers in the square loop until the shape looks good_
+_HINT: Try out different numbers in the triangle loop until the shape looks good_
 
 ## Other shapes
 Create new turtles (or update the existing turtles) and make them draw the following shapes:
-- Diamond (note: a _diamond_ is simply a tilted square)
+- Diamond
 - Hexagon
 - Septagon
 - Parallelogram
