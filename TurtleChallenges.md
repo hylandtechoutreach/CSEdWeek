@@ -2,7 +2,7 @@
 Play around with the turtles to create something cool! Feel free to start from the challenges below, or do something completely different.
 
 ## Pentagon
-Update the code so that the turtle draws a square instead of a triangle.
+Update the code so that the turtle draws a pentagon instead of a triangle.
 
 ### Code to update
 ```python
